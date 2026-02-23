@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/ -->
+<html lang="pt" dir="ltr" data-whatinput="keyboard" data-whatintent="mouse" class="whatinput-types-initial whatinput-types-mouse translated-ltr whatinput-types-keyboard"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>O que é um Diagrama de Entidade-Relacionamento (DER)?</title>
+	<meta name="description" content="Learn Entity Relationship Diagram (ERD). Read this ERD guide for everything you need to know about data modeling and database design with ERD.">
+	<meta name="keywords" content="erd,entity relationship diagram,what is erd,when erd,why erd,what is er diagarm,what is data modeling,what is er model,erd tool,erd software,database design,data modeling,data modeling tool,er diagram,er diagram tool,er database design tool">	<meta name="robots" content="all">
+	<meta http-equiv="imagetoolbar" content="false">
+
+	<link rel="stylesheet" href="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/foundation-6.3.1.min.css">
+
+	<link rel="stylesheet" href="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/css">
+
+	<link rel="stylesheet" href="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/app_512.css">
+
+<style>
+
+.editions table {
+   padding-top: 0px;
+
+}
+.description {
+width: 60%;
+}
+@media only screen and (max-width: 767px) {
+.description {
+width:100%;
+}
+
+}
+@media only screen and (max-width: 40em) {
+.editions table th {
+    font-size: .9rem;
+        padding: 9px 2px;}
+
+}
+
+</style>
+  <meta class="foundation-mq"><link rel="stylesheet" href="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/foundation-icons.min.css" type="text/css"><link type="text/css" rel="stylesheet" charset="UTF-8" href="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/m=el_main_css"></head>
+
+ <body id="what-is-page">
+	
+
+
+
+<!-- navigation -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.visual-paradigm.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.visual-paradigm.com/favicon-16x16.png">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+    /* Scoped styles for the new top bar to avoid conflicts */
+    .vp-new-top-bar { background-color: #0f172a; color: #cbd5e1; font-size: 12px; padding: 8px 0; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; z-index: 2000; }
+    .vp-new-top-bar a { color: #cbd5e1; text-decoration: none; transition: color 0.2s; }
+    .vp-new-top-bar a:hover { color: #ffffff; }
+    .vp-new-top-bar .flex-container { display: flex; justify-content: space-between; align-items: center; }
+    .vp-new-top-bar .left-section { display: flex; gap: 20px; }
+    .vp-new-top-bar .right-section { display: flex; gap: 16px; align-items: center; }
+    .vp-new-top-bar .product-name { color: #ffffff; font-weight: bold; cursor: default; }
+    .vp-new-top-bar .online-link { display: flex; align-items: center; gap: 4px; }
+    
+    /* Simple CSS Dropdown for Language in the top bar */
+    .vp-lang-dropdown { position: relative; margin-left: 8px; padding-left: 16px; border-left: 1px solid #334155; }
+    .vp-lang-btn { background: none; border: none; color: #cbd5e1; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 0; font-size: 12px; }
+    .vp-lang-btn:hover { color: #ffffff; }
+    .vp-lang-menu { display: none; position: absolute; right: 0; top: 100%; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 4px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); z-index: 100; min-width: 120px; margin-top: 4px; z-index: 2001;}
+    .vp-lang-dropdown:hover .vp-lang-menu { display: block; }
+    .vp-lang-menu a { display: block; padding: 8px 12px; color: #1e293b; text-align: left; }
+    .vp-lang-menu a:hover { background-color: #f1f5f9; color: #4f46e5; }
+    
+        /* 2. Navbar Layout Fixes */
+    .vp-navbar-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px; /* Enforce height to prevent shifting */
+        position: relative;
+    }
+    
+    .vp-logo-container {
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+        /* 4. Purple CTA Button (Positioned Right) */
+    
+    .vp-btn-purple {
+        background-color: #4f46e5 !important; /* Indigo 600 */
+        color: white !important;
+        font-weight: bold;
+        padding: 10px 20px !important;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+        display: inline-block;
+    }
+    .vp-btn-purple:hover {
+        background-color: #4338ca !important; /* Indigo 700 */
+        color: white !important;
+    }
+    
+    /* Hide on small screens (using Foundation's visibility classes usually, but forcing it here just in case) */
+    @media only screen and (max-width: 1023px) { 
+        .vp-new-top-bar { display: none; } 
+        .vp-menu-cta { position: static; transform: none; margin-top: 10px; }
+        .vp-btn-purple { display: block; text-align: center; }
+    }
+</style>
+
+<!--end of navigation -->
+
+	
+<!--H1 header-->
+<div class="title-container">
+<div class="row column text-center">
+<h1><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O que é um Diagrama de Entidade-Relacionamento (DER)?</font></font></h1>
+
+</div>
+</div>
+
+
+<div class="content-container-alt">
+ <div class="row small-12 medium-12 large-12 columns">
+
+
+<div class="medium-12 large-3 columns sticky-container" data-sticky-container="" style="height: 564.4px;">
+
+
+<nav class="columns sticky is-anchored is-at-top" data-sticky="2d7j3w-sticky" data-margin-top="5" data-anchor="first-info" data-sticky-on="large" data-resize="bwqdv1-sticky" style="max-width: 262.5px; margin-top: 0px; bottom: auto; top: 0px;">
+	<ul class="vertical what-is-menu what-is" data-magellan="4yny1d-magellan" data-active-class="active" data-bar-offset="60" data-resize="c2xism-magellan" data-scroll="c2xism-magellan" id="c2xism-magellan" data-events="scroll">
+		 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd" class=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O que é um DER?</font></font></a></li>
+<li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-diagram" class=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O que é um diagrama ER (DER)?</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-when-to-draw" class=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Quando desenhar diagramas ER?</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-notations-guide" class=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guia de notações ERD</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-data-models" class=""><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelos de dados conceituais, lógicos e físicos</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-draw"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Como desenhar um diagrama ER?</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-examples"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplos de modelos de dados</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-data-flow"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Utilizando DER com DFD</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-bpd"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Utilizando DER com BPMN</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#choosing-an-erd-tool"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Escolhendo uma ferramenta ERD</font></font></a></li>
+	 <li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#related-links"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Links relacionados</font></font></a></li>
+	</ul>
+  </nav>
+</div>
+
+<!-- Add content where magellan will be linked -->
+<div class="medium-12 large-9 columns float-right" style="border-left: 1px solid #dddddd; padding-left: 20px;">
+<div class="sections" id="first-info">
+
+<section id="erd" data-magellan-target="erd">
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O banco de dados é parte integrante dos sistemas de software. Utilizar plenamente o Diagrama ER na engenharia de bancos de dados garante a criação de um projeto de alta qualidade para a criação, gerenciamento e manutenção do banco de dados. Um modelo ER também fornece um meio de comunicação.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/01-entity-relationship-diagram.png" alt="Diagrama de Entidade-Relacionamento (DER)">
+<div class="space-gap"></div>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Hoje vamos apresentar tudo o que você precisa saber sobre diagramas ER. Ao ler este guia sobre DER, você adquirirá o conhecimento e as habilidades essenciais sobre diagramas ER e design de banco de dados. Você aprenderá o que é um DER, por que usar um DER, notações de DER, como desenhar um DER, etc., além de diversos exemplos de DER.</font></font></p>
+</section>
+<!-- draw now ad -->
+<div class="bs-calltoaction bs-calltoaction-default">
+
+</div>
+<!-- end of draw now ad -->	
+
+<section id="erd-diagram" data-magellan-target="erd-diagram">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O que é um diagrama ER (DER)?</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Primeiramente, o que é um Diagrama de Entidade-Relacionamento?</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O Diagrama de Entidade-Relacionamento, também conhecido como DER, Diagrama ER ou modelo ER, é um tipo de diagrama estrutural usado no projeto de bancos de dados. Um DER contém diferentes símbolos e conectores que visualizam duas informações importantes: </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">as principais entidades dentro do escopo do sistema</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> e os </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">relacionamentos entre essas entidades</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> .</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">E é por isso que se chama diagrama de "Entidade" e "Relacionamento" (DER)!</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Quando falamos de entidades em um DER (Diagrama Entidade-Relacionamento), geralmente estamos nos referindo a objetos de negócio como pessoas/funções (ex: Aluno), objetos de negócio tangíveis (ex: Produto), objetos de negócio intangíveis (ex: Registro), etc. "Relacionamento" diz respeito a como essas entidades se relacionam entre si dentro do sistema.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/02-er-diagram-depicts-business-entities-relationships.png" alt="O diagrama ER representa o relacionamento entre entidades empresariais.">
+<div class="space-gap"></div>
+
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Em um projeto ER típico, você pode encontrar símbolos como retângulos arredondados e conectores (com diferentes estilos em suas extremidades) que representam as entidades, seus atributos e inter-relacionamentos.</font></font></p>
+</section>
+
+<section id="erd-when-to-draw" data-magellan-target="erd-when-to-draw">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Quando desenhar diagramas ER?</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Então, quando devemos desenhar diagramas ER? Embora os modelos ER sejam desenvolvidos principalmente para o projeto de bancos de dados relacionais em termos de visualização de conceitos e projeto físico de bancos de dados, ainda existem outras situações em que os diagramas ER podem ser úteis. Aqui estão alguns casos de uso típicos.</font></font></p>
+<ul>
+<li><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Projeto de banco de dados</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> - Dependendo da escala da mudança, alterar a estrutura de um banco de dados diretamente em um SGBD pode ser arriscado. Para evitar danos aos dados em um banco de dados de produção, é fundamental planejar as alterações cuidadosamente. O Diagrama Entidade-Relacionamento (DER) é uma ferramenta útil nesse processo. Ao desenhar diagramas ER para visualizar ideias de projeto de banco de dados, você tem a oportunidade de identificar erros e falhas de projeto, e de corrigi-los antes de implementar as alterações no banco de dados.</font></font></li>
+<li><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Depuração de banco de dados</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> - Depurar problemas em um banco de dados pode ser um desafio, especialmente quando ele contém muitas tabelas, o que exige a escrita de SQL complexo para obter as informações necessárias. Ao visualizar o esquema do banco de dados com um diagrama ER, você obtém uma visão completa de todo o esquema. Você pode localizar facilmente entidades, visualizar seus atributos e identificar os relacionamentos que elas têm com outras. Tudo isso permite analisar um banco de dados existente e revelar problemas com mais facilidade.</font></font></li>
+<li><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Criação e atualização de banco de dados</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> - O Visual Paradigm, uma ferramenta de diagrama ER, oferece suporte a uma ferramenta de geração de banco de dados que automatiza o processo de criação e atualização de bancos de dados por meio de diagramas ER. Assim, com essa ferramenta de diagrama ER, seu projeto ER deixa de ser apenas um diagrama estático e se torna um reflexo fiel da estrutura física do banco de dados.</font></font></li>
+<li><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Auxílio na coleta de requisitos</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> - Determine os requisitos de um sistema de informação desenhando um diagrama ER conceitual que represente os objetos de negócio de alto nível do sistema. Esse modelo inicial também pode ser evoluído para um modelo físico de banco de dados que auxilie na criação de um banco de dados relacional ou na criação de mapas de processos e fluxogramas de dados.</font></font></li>
+
+</ul>
+</section>
+
+
+<section id="erd-notations-guide" data-magellan-target="erd-notations-guide">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Guia de notações ERD</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um diagrama ER contém entidades, atributos e relacionamentos. Nesta seção, vamos analisar detalhadamente os símbolos do DER.</font></font></p>
+
+
+
+<h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entidade</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Uma entidade em um DER é uma </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">coisa ou conceito definível dentro de um sistema</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> , como uma pessoa/função (ex.: Aluno), um objeto (ex.: Fatura), um conceito (ex.: Perfil) ou um evento (ex.: Transação) (nota: em DER, o termo "entidade" é frequentemente usado em vez de "tabela", mas são sinônimos). Ao definir entidades, pense nelas como substantivos. Em modelos ER, uma entidade é representada por um retângulo com cantos arredondados, com seu nome na parte superior e seus atributos listados no corpo da forma da entidade. O exemplo de DER abaixo mostra um exemplo de uma entidade ER.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/03-an-erd-entity.png" alt="Entidade">
+
+<div class="space-gap-small"></div>
+
+
+<h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Atributos da Entidade</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Também conhecido como coluna, um atributo é uma </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">propriedade ou característica da entidade que o contém</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> .</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um atributo possui um nome que descreve a propriedade e um tipo que descreve o tipo de atributo, como varchar para string e int para inteiro. Ao elaborar um diagrama ER para o desenvolvimento físico de um banco de dados, é importante garantir o uso de tipos suportados pelo SGBD relacional de destino.</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O exemplo de diagrama ER abaixo mostra uma entidade com alguns atributos.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/04-an-erd-entity-with-entities.png" alt="Atributos da Entidade">
+
+<div class="space-gap"></div>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Chave primária</font></font></h4>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Também conhecida como chave primária, uma chave primária é um tipo especial de atributo de entidade que </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">define exclusivamente um registro em uma tabela de banco de dados</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Em outras palavras, não pode haver dois (ou mais) registros que compartilhem o mesmo valor para o atributo de chave primária. O exemplo de diagrama ER abaixo mostra uma entidade 'Produto' com um atributo de chave primária 'ID' e uma pré-visualização dos registros da tabela no banco de dados. O terceiro registro é inválido porque o valor do ID 'PDT-0002' já está sendo usado por outro registro.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/05-concept-of-erd-primary-key.png" alt="Chave primária">
+
+<div class="space-gap-large"></div>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Chave estrangeira</font></font></h4>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Também conhecida como chave estrangeira (FK, na sigla em inglês), uma chave estrangeira é uma </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">referência a uma chave primária em uma tabela</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Ela é usada para identificar os relacionamentos entre entidades. Observe que as chaves estrangeiras não precisam ser únicas. Vários registros podem compartilhar os mesmos valores. O exemplo de diagrama ER abaixo mostra uma entidade com algumas colunas, entre as quais uma chave estrangeira é usada para referenciar outra entidade.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/06-concept-of-erd-foreign-key.png" alt="Chave estrangeira">
+
+
+
+
+<h3><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Relação</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Uma relação entre duas entidades significa que </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">elas estão associadas de alguma forma</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Por exemplo, um aluno pode se matricular em um curso. A entidade Aluno está, portanto, relacionada ao Curso, e a relação é representada como um conector entre elas.
+</font></font></p>
+<div class="space-gap"></div>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Cardinalidade</font></font></h4>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">A cardinalidade define o </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">número possível de ocorrências de uma entidade em relação ao número de ocorrências de outra</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Por exemplo, UMA equipe tem MUITOS jogadores. Quando presentes em um diagrama ER, as entidades Equipe e Jogador estão interconectadas por meio de um relacionamento um-para-muitos.</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Em um diagrama ER, a cardinalidade é representada por um pé de galinha nas extremidades dos conectores. Os três relacionamentos cardinais mais comuns são um-para-um, um-para-muitos e muitos-para-muitos.</font></font></p>
+
+<div class="space-gap"></div>
+<h5><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de cardinalidade um-para-um</font></font></h5>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Uma relação um-para-um é geralmente usada para dividir uma entidade em duas, a fim de fornecer informações de forma concisa e torná-las mais compreensíveis. A figura abaixo mostra um exemplo de uma relação um-para-um.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/07-erd-one-to-one-relationship-example.png" alt="Exemplo de cardinalidade um-para-um">
+
+<div class="space-gap-large"></div>
+<h5><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de cardinalidade um-para-muitos</font></font></h5>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um relacionamento um-para-muitos refere-se à relação entre duas entidades X e Y, na qual uma instância de X pode estar ligada a várias instâncias de Y, mas uma instância de Y está ligada a apenas uma instância de X. A figura abaixo mostra um exemplo de um relacionamento um-para-muitos.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/08-erd-one-to-many-example.png" alt="Exemplo de cardinalidade um-para-muitos">
+
+<div class="space-gap-large"></div>
+<h5><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de cardinalidade muitos-para-muitos</font></font></h5>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um relacionamento muitos-para-muitos refere-se à relação entre duas entidades X e Y, na qual X pode estar ligada a várias instâncias de Y e vice-versa. A figura abaixo mostra um exemplo de um relacionamento muitos-para-muitos. Observe que, em um diagrama ER físico, um relacionamento muitos-para-muitos é dividido em um par de relacionamentos um-para-muitos. Você entenderá o que é um diagrama ER físico na próxima seção.</font></font></p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/09-erd-many-to-many-example.png" alt="Exemplo de cardinalidade muitos-para-muitos">
+<div class="space-gap-large"></div>
+
+</section>
+
+<section id="erd-data-models" data-magellan-target="erd-data-models">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelos de dados conceituais, lógicos e físicos</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um modelo ER é normalmente desenhado em até três níveis de abstração:</font></font></p>
+<ul>
+<li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-data-models-conceptual"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Diagrama ER conceitual / Modelo de dados conceitual</font></font></a></li>
+<li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-data-models-logical"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Diagrama ER lógico / Modelo de dados lógico</font></font></a></li>
+<li><a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/#erd-data-models-physical"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Diagrama ER físico / Modelo de dados físico</font></font></a></li>
+
+</ul>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Embora todos os três níveis de um modelo ER contenham entidades com atributos e relacionamentos, eles diferem nos propósitos para os quais são criados e nos públicos-alvo que devem atingir.</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">De forma geral, os três modelos de dados são os seguintes: o analista de negócios utiliza um modelo conceitual e lógico para representar os objetos de negócio existentes no sistema, enquanto o projetista ou engenheiro de banco de dados elabora o modelo ER conceitual e lógico para produzir o modelo físico que apresenta a estrutura física do banco de dados, pronta para sua criação. A tabela abaixo mostra a diferença entre os três modelos de dados.</font></font></p>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelo conceitual vs. Modelo lógico vs. Modelo de dados:</font></font></p>
+<div class="editions">
+
+
+<table class="unstriped">
+<tbody><tr>
+		<th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Características do DER</font></font></th>
+		<th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Conceptual</font></font></th>
+		<th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Lógico</font></font></th>
+		<th><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Físico</font></font></th>
+		
+	</tr>
+
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Entidade (Nome)</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Relação</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Colunas</font></font></td>
+<td></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Tipos de coluna</font></font></td>
+<td></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Opcional</font></font></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Chave primária</font></font></td>
+<td></td>
+<td></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+
+<tr>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Chave estrangeira</font></font></td>
+<td></td>
+<td></td>
+<td><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Sim</font></font></td>
+
+</tr>
+</tbody></table>
+	
+</div>
+
+
+
+<h3 id="erd-data-models-conceptual"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelo de dados conceitual</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Os diagramas ER conceituais modelam os </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">objetos de negócio que devem existir em um sistema e os relacionamentos entre eles</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Um modelo conceitual é desenvolvido para apresentar uma visão geral do sistema, reconhecendo os objetos de negócio envolvidos. Ele define quais entidades existem, e NÃO quais tabelas. Por exemplo, tabelas com relacionamento "muitos para muitos" podem existir em um modelo de dados lógico ou físico, mas são representadas apenas como um relacionamento sem cardinalidade no modelo de dados conceitual.</font></font></p>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de modelo de dados conceitual</font></font></h4>
+<div class="space-gap"></div>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/10-conceptual-data-model-example.png" alt="Modelo de dados conceitual">
+<div class="space-gap"></div>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">NOTA: O DER conceitual suporta o uso de generalização na modelagem da relação "um tipo de" entre duas entidades; por exemplo, Triângulo é um tipo de Forma. O uso é semelhante à generalização em UML. Observe que somente o DER conceitual suporta generalização.</font></font></p>
+<div class="space-gap-large"></div>
+
+
+<h3 id="erd-data-models-logical"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelo de dados lógico</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Um DER lógico é uma </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">versão detalhada de um DER conceitual</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Um modelo ER lógico é desenvolvido para enriquecer um modelo conceitual, definindo explicitamente as colunas em cada entidade e introduzindo entidades operacionais e transacionais. Embora um modelo de dados lógico seja independente do sistema de banco de dados no qual o banco de dados será criado, você ainda pode levá-lo em consideração se isso afetar o projeto.</font></font></p>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de modelo de dados lógico</font></font></h4>
+<div class="space-gap"></div>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/11-logical-data-model-example.png" alt="Modelo de dados lógico">
+<div class="space-gap-large"></div>
+
+
+
+
+<h3 id="erd-data-models-physical"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Modelo de dados físicos</font></font></h3>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O diagrama ER físico representa o </font></font><strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">projeto concreto de um banco de dados relacional</font></font></strong><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Um modelo de dados físico detalha o modelo de dados lógico, atribuindo a cada coluna tipo, comprimento, nulidade, etc. Como um diagrama ER físico representa como os dados devem ser estruturados e relacionados em um SGBD específico, é importante considerar as convenções e restrições do sistema de banco de dados em que o banco de dados será criado. Certifique-se de que os tipos de coluna sejam suportados pelo SGBD e que palavras reservadas não sejam usadas na nomenclatura de entidades e colunas.</font></font></p>
+<h4><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Exemplo de modelo de dados físicos</font></font></h4>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/12-physical-data-model-example.png" alt="Modelo de dados físicos">
+<div class="space-gap-large"></div>
+
+</section>
+
+
+<section id="erd-draw" data-magellan-target="erd-draw">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Como desenhar um diagrama ER?</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Se você está com dificuldades para começar a desenhar um diagrama ER, não se preocupe. Nesta seção, daremos algumas dicas sobre diagramas ER. Siga os passos abaixo para entender como desenhar um diagrama ER de forma eficaz.</font></font></p>
+<ol>
+<li>Make sure you are clear about the purpose of drawing the ERD. Are you trying to present an overall system architecture that involves the definition of business objects? Or are you developing an ER model ready for database creation? You must be clear about the purpose to develop an ER diagram at the right level of detail (Read the section Conceptual, Logical and Physical Data Models for more details)</li>
+<li>Make sure you are clear about the scope to model. Knowing the modeling scope prevents you from including redundant entities and relationships in your design.</li>
+<li>Draw the major entities involved in the scope. </li>
+<li>Define the properties of entities by adding columns.</li>
+<li>Review the ERD carefully and check if the entities and columns are enough to store the data of the system. If not, consider adding additional entities and columns. Usually, you can identify some transactional, operational and event entities in this step.</li>
+<li>Consider the relationships between all entities and relate them with proper cardinality (e.g A one-to-many between entity Customer and Order). Don't worry if there are orphan entities. Although it's not common, it's legit.</li>
+<li>Apply the technique of database normalization to re-structure the entities in a way that can reduce data redundancy and improve data integrity. For example, the details of the manufacturer might be stored under the Product entity initially. During the process of normalization, you may find that the detail keeps repeating records over records, then you can split it as a separate entity Manufacturer, and with a foreign key that links between Product and Manufacturer.</li>
+
+</ol></section>
+
+<section id="erd-examples" data-magellan-target="erd-examples">
+<h2>Data model examples</h2>
+<div class="space-gap"></div>
+
+<section id="erd-examples-movie-rental-system" data-magellan-target="erd-examples">
+
+<h3>ERD example - Movie Rental System</h3>
+<div class="space-gap"></div>
+
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/13-erd-example-movie-rental-system.png" alt="Exemplo de DER - Sistema de Locação de Filmes">
+<div class="space-gap-large"></div>
+</section>
+
+<section id="erd-examples-loan-system" data-magellan-target="erd-examples">
+
+<h3>ERD example - Loan System</h3>
+<div class="space-gap"></div>
+
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/14-erd-example-loan-system.png" alt="Exemplo de DER - Sistema de Empréstimo">
+<div class="space-gap-large"></div>
+</section>
+
+<section id="erd-examples-online-shop" data-magellan-target="erd-examples">
+
+<h3>ERD example - Online Shop</h3>
+<div class="space-gap"></div>
+
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/15-erd-example-online-shop.png" alt="Exemplo de DER - Loja Online">
+<div class="space-gap-large"></div>
+</section>
+</section>
+
+<section id="erd-data-flow" data-magellan-target="erd-data-flow">
+<h2>Using ERD with Data Flow Diagram (DFD)</h2>
+<p>In system analysis and design, <a href="https://www.visual-paradigm.com/features/data-flow-diagram-tool">Data Flow Diagram (DFD)</a> can be drawn to visualize the flow of information within system processes. In a Data Flow Diagram, there is a symbol called Data Store, which represents a database table that provides the information needed by the system. </p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/16-data-flow-diagram-example.png" alt="Diagrama ER com Diagrama de Fluxo de Dados">
+<div class="space-gap"></div>
+<p>Since a physical ER Diagram provides a blueprint of an actual database, the entities in such an ERD are aligned with datastores in a DFD. You can draw ERD as a complement to DFD by representing the structure of information that flows within a system, or, on the contrary, to draw DFD in complementing an ERD by showing how the data will be utilized by the system in runtime.</p>
+
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/17-dfd-data-store-modeled-by-erd.png" alt="Modelo de armazenamento de dados ERD">
+<div class="space-gap-large"></div>
+</section>
+
+<section id="erd-bpd" data-magellan-target="erd-bpd">
+<h2>Using ERD with BPMN Business Process Diagram (BPD)</h2>
+<p>In business process mapping, <a href="https://www.visual-paradigm.com/features/bpmn-diagram-and-tools">BPMN Business Process Diagram (BPD)</a> can be drawn to visualize business workflows. In a Business Process Diagram, there is a symbol called Data Object, which represents the data input into / output from process activities. </p>
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/18-bpmn-process-diagram-example.png" alt="Diagrama ERD com Diagrama de Processos de Negócio BPMN (BPD)">
+<div class="space-gap"></div>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Como um modelo de dados conceitual e lógico fornece uma visão geral dos objetos de negócio dentro de um sistema, as entidades nesses diagramas ER estão alinhadas com os objetos de dados no diagrama de processos de negócio (BPD). Você pode desenhar um diagrama ER como complemento ao BPD, representando a estrutura dos objetos de dados necessários para um fluxo de trabalho de negócio ou, inversamente, desenhar um BPD como complemento a um diagrama ER, mostrando como os dados serão utilizados ao longo de um processo de negócio.</font></font></p>
+
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/19-bpmn-data-object-modeled-by-erd.png" alt="Objeto de dados BPMN modelado por um diagrama ER">
+<div class="space-gap-large"></div>
+</section>
+
+
+<section id="choosing-an-erd-tool" data-magellan-target="choosing-an-erd-tool">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Escolhendo uma ferramenta ERD</font></font></h2>
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Desenvolver um modelo de dados com um diagrama ER exige tempo e esforço. Uma ferramenta útil de design de banco de dados deve ser capaz de reduzir esse tempo e esforço. O Visual Paradigm oferece não apenas uma ferramenta de DER, mas também um conjunto de recursos de modelagem visual que ajudam você a desenhar diagramas de forma mais rápida e fácil. Ele é compatível com a maioria dos sistemas de gerenciamento de banco de dados relacionais populares no mercado atualmente, tanto em termos de design e geração de banco de dados quanto na inversão de diagramas ER.</font></font></p> 
+<img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/20-wide-range-of-dbms-supported.png" alt="Ampla gama de SGBDs suportados">
+<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">O designer de diagramas ER está disponível no </font></font><a href="https://www.visual-paradigm.com/editions/modeler/"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Visual Paradigm Modeler</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> , que custa </font></font><a href="https://www.visual-paradigm.com/shop/vp.jsp"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">apenas US$ 6 por mês</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Recomendamos que você </font></font><a href="https://www.visual-paradigm.com/download/"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">baixe e experimente</font></font></a><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;"> . Oferecemos 30 dias de avaliação GRATUITA. Não é necessário cartão de crédito.</font></font></p>
+</section>
+<div class="bs-calltoaction bs-calltoaction-default1">
+	<div class="row">
+		<div class="medium-12 columns">
+			<div class="medium-3 small-3 columns"></div>
+			<div class="medium-9 small-9 columns cta-contents text-center">
+				<h1 class="cta-title1"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Crie seu banco de dados agora</font></font></h1>
+				<div class="cta-desc">
+					<p><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Você aprendeu o que é um diagrama ER e como criar um DER para projeto de banco de dados ou modelagem de dados. Agora é hora de experimentar. Obtenha o Visual Paradigm Community Edition, uma ferramenta gratuita de DER, e desenvolva seu próprio modelo ER com a ferramenta gratuita de diagramas ER. É fácil de usar e intuitiva.</font></font></p>
+
+					<a href="https://www.visual-paradigm.com/download/community.jsp" class="drawnow-btn"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Download grátis</font></font></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<section id="related-links" data-magellan-target="related-links">
+<h2><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Links relacionados</font></font></h2>
+<br>
+<ol>
+<li><a href="https://www.visual-paradigm.com/features/database-design-with-erd-tools"><font dir="auto" style="vertical-align: inherit;"><font dir="auto" style="vertical-align: inherit;">Saiba mais sobre a poderosa ferramenta ERD do Visual Paradigm.</font></font></a></li>
+</ol>
+</section>
+  
+</div>
+</div>
+
+
+
+
+<!--1st set -->
+
+	 </div></div>
+	 
+	   <!--End of 1st content -->	
+		
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+<script async="" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P4J329C27P');
+</script>
+
+
+<div class="scroll-top-wrapper">
+	<span class="scroll-top-inner"> <i class="fi-arrow-up arrow-up-style"></i>
+	</span>
+</div>
+
+	<script type="text/javascript" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/jquery-2.2.4.min.js.download"></script>
+
+	<script type="text/javascript" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/what-input-4.0.4.min.js.download"></script>
+
+	<script type="text/javascript" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/foundation-6.3.1.min.js.download"></script>
+
+<script type="text/javascript" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/app_512.js.download" defer=""></script>
+
+<script type="text/javascript">
+		var lDeferStyleSheets = [
+			"https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css"  
+			];
+   	$(document).ready(function() {
+   		$("#language-menu a").click(function() {
+   			setCookie("locale-selected", true);
+   			setCookie("locale", $(this).data("locale"));
+   		});
+   		
+			$('#cookieConsent').hide();
+			
+			var myCookie = getCookie("cookieConsentOK");
+		    if (myCookie == null) {
+		    	setTimeout(function () {
+		            $("#cookieConsent").fadeIn(200);
+		         }, 1000);
+		        $("#closeCookieConsent, .cookieConsentOK").click(function() {
+		            $("#cookieConsent").fadeOut(200);
+				    var expires = new Date(new Date().getTime() + (1000*60*60*24 *3560));
+		            setCookie('cookieConsentOK', true, expires, '/', 'visual-paradigm.com', true);
+		        }); 
+		    }
+		}); 
+</script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Texto original</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Avalie a tradução</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">O feedback vai ser usado para ajudar a melhorar o Google Tradutor</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Tradução boa" aria-label="Tradução boa" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Tradução ruim" aria-label="Tradução ruim" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="https://translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" src="./O que é um Diagrama de Entidade-Relacionamento (DER)__files/saved_resource.html"></iframe></div></div></div>
+
+
+
+
+
+</body></html>
